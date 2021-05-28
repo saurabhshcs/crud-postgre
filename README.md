@@ -2,7 +2,7 @@
 
 ### Introduction
 
-> Sample code for connecting `AWS RDS PostgreSQL` using `spring-boot` and `maven3.8`
+> An example of database `CRUD` operation with `AWS RDS PostgreSQL` using `spring-boot` and `maven3.8`. I don't know why but I have just tried this time with `MAVEN` instead of my favourite `Gradle`
 
 ### Required Tools & Applications
  - Code Editor or IDE - [IntelliJ Idea](https://www.jetbrains.com/idea/download/#section=mac)
