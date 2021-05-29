@@ -9,18 +9,17 @@ package com.techsharezone.crud.postgre.controller;
 import com.techsharezone.crud.postgre.model.Employee;
 import com.techsharezone.crud.postgre.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController(value="/employee")
+@RestController(value = "/employee")
 public class EmployeeController {
 
     @Autowired
     EmployeeService employeeService;
+
+
 
     @PostMapping("/save")
     public Employee save(@RequestBody Employee employee) {
@@ -28,7 +27,12 @@ public class EmployeeController {
     }
 
     @GetMapping("/employees")
-    public List<Employee> findAll(){
+    public List<Employee> findAll() {
         return employeeService.findAll();
+    }
+
+    @GetMapping("findEmployeeById")
+    public Employee findEmployeeById(@RequestParam Long id) {
+        return employeeService.findEmployeById(id);
     }
 }
