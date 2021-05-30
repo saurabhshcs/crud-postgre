@@ -1,4 +1,4 @@
-# crud-postgre
+# crud-postgreSQL CRUD Operation
 
 ### Introduction
 
